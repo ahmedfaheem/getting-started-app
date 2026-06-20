@@ -7,6 +7,11 @@ on:
   pull_request: #any pull request to the main branch will trigger this workflow
     branches:
       - main
+
+permissions: 
+  contents: read
+  packages: write
+
 jobs:
   build: #job name
     runs-on: ubuntu-latest  #the job will run on the latest version of Ubuntu
