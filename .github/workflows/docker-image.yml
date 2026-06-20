@@ -31,8 +31,8 @@ jobs:
         context: .   #the context is set to the current directory, which means that the Dockerfile  (to this name by default))
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:latest   
-          ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:${{ github.sha }}
+                ghcr.io/${{ github.repository }}:latest
+                ghcr.io/${{ github.repository }}:${{ github.sha }}
 
 # not use the latest tag, because it can cause issues with caching and versioning. Instead, it's recommended to use a specific tag that corresponds to the commit SHA or a version number. 
 #This way, you can ensure that the correct image is used and avoid potential conflicts with other images that may have the same "latest" tag.
